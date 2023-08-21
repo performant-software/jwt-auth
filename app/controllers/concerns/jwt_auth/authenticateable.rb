@@ -6,6 +6,10 @@ module JwtAuth
       # Actions
       before_action :authenticate_request
 
+      def current_user
+        @current_user
+      end
+
       def authenticate_request
         header = request.headers['Authorization']
         header = header.split(' ').last if header
