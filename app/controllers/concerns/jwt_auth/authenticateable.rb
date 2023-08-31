@@ -1,3 +1,5 @@
+require 'jwt_auth/json_web_token'
+
 module JwtAuth
   module Authenticateable
     extend ActiveSupport::Concern
