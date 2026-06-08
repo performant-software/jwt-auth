@@ -2,7 +2,7 @@ require 'jwt'
 
 module JwtAuth
   class JsonWebToken
-    SECRET_KEY = Rails.application.credentials.secret_key_base.to_s
+    SECRET_KEY = Rails.application.secret_key_base
 
     def self.encode(payload)
       JWT.encode(payload, SECRET_KEY)
